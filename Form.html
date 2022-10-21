@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+
+<body>
+    <div class="container">
+        <form name="formPendaftaran" action="daftar.php" method="post" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label>Nama</label>
+                <input type="text" name="Nama" placeholder="Nama" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" name="Username" placeholder="Username" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="Email" name="Email" placeholder="Email" class="form-control">
+                <small id="emailHelp" class="form-text text-muted">Email Akan Digunakan Untuk Mengirimkan Notifikasi.</small>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="text" name="Password" placeholder="Password" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Confirm Password</label>
+                <input type="text" name="Confirm Password" placeholder="Confirm Password" class="form-control">
+            </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <script>
+        function validateForm() {
+            if (document.forms["formPendaftaran"]["Nama"].value == "") {
+                alert("Nama Dibutuhkan");
+                document.forms["formPendaftaran"]["Nama"].focus();
+                return false;
+            }
+            if (document.forms["formPendaftaran"]["Username"].value == "") {
+                alert("Username Dibutuhkan");
+                document.forms["formPendaftaran"]["Username"].focus();
+                return false;
+            }
+            if (document.forms["formPendaftaran"]["Email"].value == "") {
+                alert("Email Dibutuhkan");
+                document.forms["formPendaftaran"]["Email"].focus();
+                return false;
+            }
+            if (document.forms["formPendaftaran"]["Password"].value == "") {
+                alert("Password Dibutuhkan");
+                document.forms["formPendaftaran"]["Password"].focus();
+                return false;
+            }
+            if (document.forms["formPendaftaran"]["Confirm Password"].value == "") {
+                alert("Confirm Password Dibutuhkan");
+                document.forms["formPendaftaran"]["Confirm Password"].focus();
+                return false;
+            }
+        }
+    </script>
+    </script>
+</body>
+</html>
